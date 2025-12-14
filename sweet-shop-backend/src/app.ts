@@ -6,7 +6,10 @@ import inventoryRoutes from "./modules/inventory/inventory.routes";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "*",   // Later replace with your frontend URL (Vercel)
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
