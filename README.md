@@ -1,6 +1,9 @@
 The Sweet Shop Management System is a full-stack web application that allows customers to browse sweets, search, filter, and manage cart items. Admin users can manage the inventory, add/update/delete sweets, and control stock.
 
 This project was built according to the TDD Kata requirements, with backend tests, clean commit history, and transparent AI usage.
+This project was developed with assistance from ChatGPT (OpenAI).
+Some commits may not include co-author trailers due to initial setup.
+
 
 🎯 Features
 🧁 User Features
