@@ -1,0 +1,43 @@
+PS C:\Users\rathi\Desktop\pjt - Copy\sweet-shop-backend> npm test
+
+> sweet-shop-backend@1.0.0 test
+> jest --detectOpenHandles --forceExit
+
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[config] (WARN) 
+    The "ts-jest" config option "isolatedModules" is deprecated and will be removed in v30.0.0. Please use "isolatedModules: true" in C:/Users/rathi/Desktop/pjt - Copy/sweet-shop-backend/tsconfig.json instead, see https://www.typescriptlang.org/tsconfig/#isolatedModules
+
+ PASS  src/modules/inventory/inventory.test.ts
+  ● Console
+
+    console.log
+      [dotenv@17.2.3] injecting env (3) from .env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+
+      at _log (node_modules/dotenv/lib/main.js:142:11)
+
+ PASS  src/modules/sweets/sweet.test.ts
+  ● Console
+                                                                                                              
+    console.log
+      [dotenv@17.2.3] injecting env (3) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com        
+
+      at _log (node_modules/dotenv/lib/main.js:142:11)
+
+ PASS  src/modules/auth/auth.test.ts
+  ● Console
+
+    console.log
+      [dotenv@17.2.3] injecting env (3) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`  
+
+      at _log (node_modules/dotenv/lib/main.js:142:11)
+
+
+Test Suites: 3 passed, 3 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        3.39 s
+Ran all test suites.
