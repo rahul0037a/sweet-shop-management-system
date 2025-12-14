@@ -9,6 +9,8 @@ Admins can additionally add, edit, delete, and restock sweets.
 
 This project is built following Test-Driven Development (TDD) practices, with a clean commit history and test coverage for backend logic.
 
+
+
 🚀 Features
 🧁 User Features
 
@@ -87,6 +89,18 @@ Admin-only permissions
 Error handling
 
 Test runner: Jest + Supertest
+
+
+SCREENSHOTS: 
+
+<img width="1909" height="856" alt="image" src="https://github.com/user-attachments/assets/28222d17-bdf8-4f0c-8a13-7ec265dffedd" />
+<img width="1892" height="852" alt="image" src="https://github.com/user-attachments/assets/5ab090a9-7f6b-42e7-89a1-6f3f41310d3b" />
+<img width="1864" height="521" alt="image" src="https://github.com/user-attachments/assets/f378cba8-9368-4cfc-8b71-da36b9a44a5d" />
+<img width="1914" height="865" alt="image" src="https://github.com/user-attachments/assets/9770d9d1-3b45-44de-9775-c51a2240796e" />
+<img width="1142" height="727" alt="image" src="https://github.com/user-attachments/assets/6b0b0394-8f79-4d70-8e4e-48a5480d6004" />
+<img width="934" height="532" alt="image" src="https://github.com/user-attachments/assets/7f758e5d-44a4-4ddd-a56c-faee1e6ddd3e" />
+
+
 
 🛠️ Tech Stack
 Frontend
@@ -203,14 +217,5 @@ All AI-generated code was fully reviewed
 Security-sensitive logic (auth, roles, tokens) was manually validated
 
 All commits involving AI include a Co-authored-by: AI Tool AI@noreply.github.com
-
-SCREENSHOTS: 
-
-<img width="1909" height="856" alt="image" src="https://github.com/user-attachments/assets/28222d17-bdf8-4f0c-8a13-7ec265dffedd" />
-<img width="1892" height="852" alt="image" src="https://github.com/user-attachments/assets/5ab090a9-7f6b-42e7-89a1-6f3f41310d3b" />
-<img width="1864" height="521" alt="image" src="https://github.com/user-attachments/assets/f378cba8-9368-4cfc-8b71-da36b9a44a5d" />
-<img width="1914" height="865" alt="image" src="https://github.com/user-attachments/assets/9770d9d1-3b45-44de-9775-c51a2240796e" />
-<img width="1142" height="727" alt="image" src="https://github.com/user-attachments/assets/6b0b0394-8f79-4d70-8e4e-48a5480d6004" />
-<img width="934" height="532" alt="image" src="https://github.com/user-attachments/assets/7f758e5d-44a4-4ddd-a56c-faee1e6ddd3e" />
 
 
