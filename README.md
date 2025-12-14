@@ -1,97 +1,145 @@
-🍬 Sweet Shop Management System
+The Sweet Shop Management System is a full-stack web application that allows customers to browse sweets, search, filter, and manage cart items. Admin users can manage the inventory, add/update/delete sweets, and control stock.
 
-A full-stack TDD-based inventory & purchase system built with Node.js, Express, MongoDB, React, and TypeScript.
+This project was built according to the TDD Kata requirements, with backend tests, clean commit history, and transparent AI usage.
 
-📌 Overview
-
-The Sweet Shop Management System is a full-stack web application that allows normal users to browse sweets, filter & search them, manage cart items, and purchase sweets from inventory.
-Admins can additionally add, edit, delete, and restock sweets.
-
-This project is built following Test-Driven Development (TDD) practices, with a clean commit history and test coverage for backend logic.
-
-
-
-🚀 Features
+🎯 Features
 🧁 User Features
 
-Register & Login (JWT Authentication)
+Register and log in using JWT Authentication
 
-Browse sweets with search, category filters, and sorting
+Browse sweets in a clean, modern UI
 
-Add sweets to cart (with quantity management)
+Search by sweet name
 
-Prevents adding more items than available stock
+Filter by category
 
-View cart & proceed to purchase
+Sort by name or price
 
-Light/Dark UI Theme (Improved UX)
+Add items to cart (with quantity controls)
 
-🛠️ Admin Features
+Prevent adding more than available stock
+
+View and update cart
+
+Dark/Light themes
+
+🛠 Admin Features
 
 Add new sweets
 
-Update sweet details
-
-Delete sweets
+Edit sweet details
 
 Restock inventory
 
-Access to admin-only APIs
+Delete sweets
+
+Admin-only route protection
+
+Separate admin dashboard
 
 🔐 Authentication
 
+Secure user registration
+
 Password hashing via bcrypt
 
-Auth token generation via JWT
+JWT-based login
 
-Admin vs User role-based authorization
+Role-based authorization (user / admin)
 
-📦 Backend API
+📦 Backend API (Node.js + Express + TypeScript)
 
-REST API built with Node.js + Express + MongoDB.
-
-Includes secure endpoints for:
+Protected REST API endpoints:
 
 Auth
+POST /api/auth/register
+POST /api/auth/login
 
-Sweets CRUD
+Sweets (Protected)
+POST   /api/sweets            (Admin)
+GET    /api/sweets
+GET    /api/sweets/search     (name/category/price)
+PUT    /api/sweets/:id        (Admin)
+DELETE /api/sweets/:id        (Admin)
 
-Inventory updates
-
-Search functionality
-
-🎨 Frontend
-
-Built with:
-
-React + TypeScript
-
-TailwindCSS
-
-Context API (Auth + Cart)
-
-Clean UI with modern components
+Inventory (Protected)
+POST /api/sweets/:id/purchase     (User)
+POST /api/sweets/:id/restock      (Admin)
 
 🧪 Test-Driven Development (TDD)
 
-This project follows the Red → Green → Refactor TDD workflow.
+Backend tests were written using Jest + Supertest, following the Red → Green → Refactor flow.
 
-✔ Backend tests include:
+Test coverage includes:
 
-Authentication
+✔ User registration
+✔ User login
+✔ Token validation
+✔ Sweets CRUD
+✔ Purchase logic
+✔ Admin access restrictions
 
-Sweets CRUD
+📸 Test Report
 
-Purchase logic
-
-Admin-only permissions
-
-Error handling
-
-Test runner: Jest + Supertest
+<img width="738" height="461" alt="image" src="https://github.com/user-attachments/assets/b1f771a6-f4fe-463b-800b-4aaddf918cf3" />
 
 
-SCREENSHOTS: 
+
+
+
+🛠️ Installation & Setup
+1️⃣ Clone the repository
+git clone https://github.com/rahul0037a/sweet-shop-management-system.git
+cd sweet-shop-management-system
+
+🛡️ Backend Setup
+Navigate to backend folder
+cd backend
+
+Install dependencies
+npm install
+
+Create .env file
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+PORT=5000
+
+Start backend
+npm run dev
+
+
+Backend runs at:
+👉 http://localhost:5000
+
+🎨 Frontend Setup
+Navigate to frontend folder
+cd ../frontend
+
+Install dependencies
+npm install
+
+Start frontend
+npm run dev
+
+
+Frontend runs at:
+👉 http://localhost:5173
+
+🔑 Test Credentials (For Evaluation)
+Admin Account
+Email: admin@test.com
+Password: 123456
+
+User Account
+Email: user@test.com
+Password: 123456
+
+
+You can also promote any user to admin manually in MongoDB:
+
+db.users.updateOne({ email: "xyz@test.com" }, { $set: { role: "admin" } })
+
+📸 Screenshots
 
 <img width="1909" height="856" alt="image" src="https://github.com/user-attachments/assets/28222d17-bdf8-4f0c-8a13-7ec265dffedd" />
 <img width="1892" height="852" alt="image" src="https://github.com/user-attachments/assets/5ab090a9-7f6b-42e7-89a1-6f3f41310d3b" />
@@ -101,121 +149,34 @@ SCREENSHOTS:
 <img width="934" height="532" alt="image" src="https://github.com/user-attachments/assets/7f758e5d-44a4-4ddd-a56c-faee1e6ddd3e" />
 
 
+🤖 My AI Usage
 
-🛠️ Tech Stack
-Frontend
-
-React + TypeScript
-
-Vite
-
-TailwindCSS
-
-Context API (State Management)
-
-Backend
-
-Node.js
-
-Express.js
-
-TypeScript
-
-MongoDB + Mongoose
-
-Jest (Testing)
-
-JWT Authentication
-
-Bcrypt
-
-📦 Installation & Setup
-🖥️ 1. Clone the Repository
-git clone https://github.com/YOUR_USER/YOUR_REPO.git
-cd YOUR_REPO
-
-🛡️ Backend Setup
-Install dependencies
-cd backend
-npm install
-
-Create .env
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-PORT=5000
-
-Run backend
-npm run dev
-
-Run tests
-npm test
-
-
-Backend runs on:
-👉 http://localhost:5000
-
-🎨 Frontend Setup
-Install dependencies
-cd frontend
-npm install
-
-Run frontend
-npm run dev
-
-
-Frontend runs on:
-👉 http://localhost:5173
-
-
-
-Default Admin for Testing ):
-Email: admin@test.com
-Password: 123456
-
-
-
-🤖 My AI Usage 
-
-This project was built with responsible and transparent use of AI tools.
+This project was built with assistance from ChatGPT and GitHub Copilot to improve efficiency while maintaining complete developer control.
 
 AI Tools Used
 
-ChatGPT
+ChatGPT – helped generate boilerplate code (controllers, routes, services), write tests, debug issues, and refine UI
 
-GitHub Copilot
+GitHub Copilot – assisted with autocomplete and code suggestions during development
 
-How AI Helped
+How AI Was Used
 
-Generating boilerplate Express controllers and services
+Generating initial Express controller/service structure
 
-Assisting with React component structure and Tailwind styling
+Helping design the React dashboard layout & Tailwind styles
 
-Writing test cases for TDD
+Debugging backend authentication and middleware
 
-Debugging authentication issues
+Tailwind & UI design improvements
 
-Improving UI and UX
+Writing test cases for auth, sweets, and inventory
 
-Helping document the project professionally
+Generating the final README.md
 
-My Reflection
+Reflection
 
-Using AI allowed me to:
+AI significantly improved development speed and reduced boilerplate work.
+All AI-generated code was personally reviewed, validated, and modified to fit the project structure and TDD requirements.
+Every commit using AI assistance includes:
 
-Work faster without sacrificing quality
-
-Learn better approaches to structuring APIs & state management
-
-Focus more on logic while offloading boilerplate
-
-Still keep full control over architecture and decision-making
-
-I ensured that:
-
-All AI-generated code was fully reviewed
-
-Security-sensitive logic (auth, roles, tokens) was manually validated
-
-All commits involving AI include a Co-authored-by: AI Tool AI@noreply.github.com
-
-
+Co-authored-by: ChatGPT <chatgpt@noreply.github.com>
