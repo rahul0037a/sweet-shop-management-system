@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://sweet-shop-backend.onrender.com/api",
 });
 
 axiosClient.interceptors.request.use((config) => {
