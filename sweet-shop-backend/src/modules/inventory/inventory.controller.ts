@@ -1,5 +1,7 @@
 import { Request, Response } from "express";
 import { Sweet } from "../sweets/sweet.model";
+import { AuthRequest } from "../../middleware/auth.middleware";
+
 
 export class InventoryController {
   async purchase(req: Request, res: Response) {
