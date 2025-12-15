@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { Sweet } from "../sweets/sweet.model";
-import { AuthRequest } from "../../middleware/auth.middleware";
+import { AuthRequest } from "../../middleware/auth"; 
 
 
 export class InventoryController {
